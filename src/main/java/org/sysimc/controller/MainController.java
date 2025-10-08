@@ -2,6 +2,8 @@ package org.sysimc.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import org.sysimc.model.Pessoa;
 
@@ -26,11 +28,27 @@ public class MainController {
 
 
 
+// ---------------------------------------------------
+      // VARIAVEIS TABELA
+    @FXML
+    TableView<Pessoa> tbPessoas;
+    @FXML
+    TableColumn<Pessoa, Integer> colId;
+    @FXML
+    TableColumn<Pessoa, String> colNome;
+    @FXML
+    TableColumn<Pessoa, Float> colPeso;
+    @FXML
+    TableColumn<Pessoa, Float> colAltura;
+    @FXML
+    TableColumn<Pessoa, Float> colIMC;
+// ---------------------------------------------------
 
     Pessoa pessoa = new Pessoa();
 
 
-
+// -------------------------------------------------------------------------------
+    // Eventos
 
     @FXML
     protected void onCalcularIMCClick() {
@@ -40,8 +58,7 @@ public class MainController {
         this.pessoa.setNome(this.txtNome.getText());
         this.pessoa.setAltura(Float.parseFloat (this.txtAltura.getText() ));
         this.pessoa.setPeso(Float.parseFloat (this.txtPeso.getText() ));
-
-
+// -------------------------------------------------------------------------------
 
 
         df.applyPattern("#0.00");

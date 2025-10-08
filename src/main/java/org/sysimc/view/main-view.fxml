@@ -101,7 +101,7 @@
             </VBox>
          </children>
       </HBox>
-      <TableView prefHeight="200.0" prefWidth="200.0">
+      <TableView prefHeight="233.0" prefWidth="694.0">
         <columns>
           <TableColumn prefWidth="75.0" text="ID" />
           <TableColumn prefWidth="310.40003967285156" text="Nome" />
